@@ -62,12 +62,12 @@ public class ExecuteXML {
 
         // Convert to more read able format
         moreReadAbleFormat();
-        System.out.println("Converted XML file to more read able format");
+//        System.out.println("Converted XML file to more read able format");
         addSources();
         System.out.println("Added sources");
         addViews();
         System.out.println("added views");
-        System.out.println(allViews.toString());
+//        System.out.println(allViews.toString());
         doOperations();
         System.out.println("Completed operations");
     }
@@ -83,9 +83,9 @@ public class ExecuteXML {
                 str+=line;
             }
             this.statements = XML.toJSONObject(str);
-            System.out.println(statements);
+//            System.out.println(statements);
             this.filterStatements();
-            System.out.println("after filter" + statements.toString());
+//            System.out.println("after filter" + statements.toString());
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -489,7 +489,7 @@ public class ExecuteXML {
 
 
     public static void main(String[] args) {
-        ExecuteXML execute = new ExecuteXML("/home/albus/DoNotTouchThis/XDM-VIEWS/src/main/resources/Execute/query1.xml");
+        ExecuteXML execute = new ExecuteXML("/home/px/Documents/Projects/XDM-VIEWS/src/main/resources/Execute/query1.xml");
         execute.execute();
         execute.displayAllViews();
     }
