@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <student>
+        <first_name>Prased</first_name>
+        <last_name>Magdum</last_name>
+        <id>MT2022090</id>
+        <branch>cse</branch>
+        <email>prasad.magdum@iiitb.ac.in</email>>
+        <mobile>8109629680</mobile>
+        <dob>1998-08-23</dob>
+    </student>
+    <student>
+        <first_name>Prateek</first_name>
+        <last_name>Chimwal</last_name>
+        <id>MT2022081</id>
+        <branch>ece</branch>
+        <email>prateek.chimwal</email>>
+        <mobile>7509977778</mobile>
+        <dob>1992-93-12</dob>
+    </student>
+    <student>
+        <first_name>Pranjal</first_name>
+        <last_name>Sharma</last_name>
+        <id>MT2021078</id>
+        <branch>ece</branch>
+        <email>pranjal.sharma@iiitb.ac.in</email>>
+        <mobile>99815915512</mobile>
+        <dob>1998-03-23</dob>
+    </student>
+</database>
