@@ -3,7 +3,6 @@ package org.example.View.XMLView;
 import com.mysql.cj.jdbc.SuspendableXAConnection;
 import org.example.Common.Condition;
 import org.example.Source.XMLSource;
-import org.example.View.View;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.XML;
@@ -69,7 +68,7 @@ public class XMLView {
 
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
         XMLView o = new XMLView();
-        XMLSource source = new XMLSource("/home/albus/DoNotTouchThis/XDM-VIEWS/src/main/resources/students.xml", true);
+        XMLSource source = new XMLSource("/home/px/Documents/Projects/XDM-VIEWS/src/main/resources/students.xml", true);
         o.addSource(source);
         o.loadData();
     }

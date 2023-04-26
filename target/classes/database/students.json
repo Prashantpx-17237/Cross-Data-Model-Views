@@ -1,5 +1,14 @@
 [
   {
+    "first_name": "prashant",
+    "last_name": "kumar",
+    "email": "prashant.kumar@iiitb.ac.in",
+    "id": "MT2022079",
+    "mobile": "8840228474",
+    "branch": "cse",
+    "dob": "2000-06-15"
+  },
+  {
     "first_name": "pallav",
     "last_name": "jain",
     "email": "pallavjain@iiitb.ac.in",

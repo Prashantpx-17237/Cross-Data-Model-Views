@@ -38,7 +38,7 @@ public class ExecuteXML {
     JSONObject statements;
 
     HashMap<String, JSONArray> allViews;
-    ExecuteXML(String url) {
+    public ExecuteXML(String url) {
         this.url = url;
         statements = null;
         allViews = new HashMap<>();
@@ -492,5 +492,9 @@ public class ExecuteXML {
         ExecuteXML execute = new ExecuteXML("/home/px/Documents/Projects/XDM-VIEWS/src/main/resources/Execute/query1.xml");
         execute.execute();
         execute.displayAllViews();
+    }
+
+    public void showAllViewName() {
+        System.out.println(allViews.keySet());
     }
 }

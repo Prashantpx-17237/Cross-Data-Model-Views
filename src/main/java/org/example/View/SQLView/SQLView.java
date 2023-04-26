@@ -2,7 +2,6 @@ package org.example.View.SQLView;
 
 import org.example.Common.Condition;
 import org.example.Source.SQLSource;
-import org.example.View.View;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -11,7 +10,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class SQLView {
-    private ArrayList<HashMap<String, String>> rows;
     private ArrayList<String> select;
     private String conditions;
     private String table;
@@ -25,7 +23,6 @@ public class SQLView {
         this.query = null;
         this.select = new ArrayList<>();
         this.conditions = "";
-        this.rows = new ArrayList<>();
         this.dataRows = new JSONArray();
     }
     public void addSource(SQLSource source) {
@@ -55,14 +52,11 @@ public class SQLView {
             ResultSetMetaData rsmd = rs.getMetaData();
             int columnNumber = rsmd.getColumnCount();
             while(rs.next()) {
-                HashMap<String, String> tempMap = new HashMap<>();
                 JSONObject object = new JSONObject();
                 for (int i = 1; i <= columnNumber; i++) {
                     object.put(rsmd.getColumnName(i), rs.getString(i));
-                    tempMap.put(rsmd.getColumnName(i), rs.getString(i));
                 }
                 dataRows.put(object);
-                rows.add(tempMap);
             }
         }
         catch (Exception e) {
@@ -102,7 +96,7 @@ public class SQLView {
                 query.append(" ").append(conditions);
         }
         query.append(";");
-        System.out.println(query);
+        //System.out.println(query);
         this.query = query.toString();
     }
 
@@ -110,13 +104,19 @@ public class SQLView {
 
     public void addSelectColumn(String column) { this.select.add(column); }
 
+    public void display(){
+        System.out.println(dataRows.toString());
+    }
+
     public static void main(String[] args) throws SQLException {
         SQLView obj = new SQLView();
-        SQLSource source = new SQLSource("localhost:3306/marketdb", "root", "password");
+        SQLSource source = new SQLSource("localhost:3306/marketdb", "px", "MT2022079");
         obj.addSource(source);
         obj.addTable("dim_prod");
 //        obj.addSelectColumn("product_category");
+//        obj.addSelectColumn("prod_id");
         obj.loadData();
+        obj.display();
     }
 }
 

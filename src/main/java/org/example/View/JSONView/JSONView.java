@@ -1,7 +1,6 @@
 package org.example.View.JSONView;
 
 import org.example.Source.JSONSource;
-import org.example.View.View;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -24,7 +23,7 @@ public class JSONView {
         source = null;
         select = new ArrayList<>();
         conditions = null;
-        JSONObject dataRows;
+        dataRows = new JSONArray();
     }
 
     public void addSource(JSONSource source) {
